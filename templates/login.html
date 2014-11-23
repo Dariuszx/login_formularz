@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+    <meta charset="UTF-8">
+    <title>Formularz rejestracyjny</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+<body>
+    <div id="background">
+
+        <div id="formularz">
+			<p id="tytul">Zaloguj się</p>
+
+				{% if error %}
+					<p style="color: red;"> {{ error }} </p>
+				{% endif %}
+
+            <form action="/login/" method="POST">
+
+                <p id="loginp">Login: <input name="login" id="login" class="textInput" type="text" required /></p>
+
+                <p id="passwordp">Hasło: <input  name="password" id="password" class="textInput" type="password" required /></p>
+
+                <br /><input type="submit" />
+
+            </form>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='skrypt.js') }}"></script>
+
+</body>
+</html>
