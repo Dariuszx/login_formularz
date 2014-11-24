@@ -3,6 +3,7 @@
 from flask import Flask, render_template, request, make_response
 import time
 app = Flask(__name__)
+app.secret_key = 'Super tajny klucz'
 
 users = {"dybkad": "123", "chaberb": "qwerty"}
 last_correct_login = {"dybkad": "", "chaberb": ""}
